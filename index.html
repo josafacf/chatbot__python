@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat IA</title>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <h3>AI ChatBot</h3>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function () {
+
+            var socket = io.connect('http://127.0.0.1:5000');
+
+            socket.on('message', function (msg) {
+                console.log('devolve ' + msg);
+                if (msg.length != 0) {
+                    $("#messages").append('<li>' + msg + '</li>');
+                    console.log('Received message');
+                }
+            });
+
+            $('#sendbutton').on('click', function () {
+                socket.send($('#myMessage').val());
+                console.log('console ' + $('#myMessage').val())
+
+                $('#myMessage').val('');
+
+
+            });
+
+        });
+    </script>
+    <ul id="messages"></ul>
+    <input type="text" id="myMessage">
+    <button id="sendbutton">Send</button>
+</body>
+
+</html>
