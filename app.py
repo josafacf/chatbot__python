@@ -93,8 +93,8 @@ def responder(texto_usuario):
     else:
 
         print(texto_usuario)
-        if(texto_usuario == "chat sobrar"):
-            print("Sim")
+        if(texto_usuario == "chat ai"):
+            print("yes")
             resposta_chatbot = ''
             return resposta_chatbot
         else:
@@ -105,7 +105,7 @@ def responder(texto_usuario):
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'mysecret'
-socketio = SocketIO(app, cors_allowed_origins="*")
+socketio = SocketIO(app, cors_allowed_origins="*", port=5000)
 
 
 # Etapa 6: Função para retornar as respostas
