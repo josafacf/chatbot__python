@@ -88,7 +88,7 @@ def responder(texto_usuario):
     vetor_encontrado = vetor_similar[-2]
 
     if(vetor_encontrado == 0):
-        resposta_chatbot = resposta_chatbot + "Sorry repeat please!"
+        resposta_chatbot = resposta_chatbot + "Sorry I did not understand!"
         return resposta_chatbot
     else:
 
