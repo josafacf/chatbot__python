@@ -57,7 +57,7 @@ lista_sentencas_preprocessada = []
 for i in range(len(lista_sentencas)):
     lista_sentencas_preprocessada.append(preprocessamento(lista_sentencas[i]))
 
-# Etapa 3: 
+# Etapa 3: Frases de boas-vindas
 textos_boasvindas_entrada = ("hey", "hello", "hi", "whats up", "how is going",)
 textos_boasvindas_respostas = [
     "hey", "hello :)", "welcome", "it's a pleasure have you here", "hi :)", 
@@ -88,13 +88,13 @@ def responder(texto_usuario):
     vetor_encontrado = vetor_similar[-2]
 
     if(vetor_encontrado == 0):
-        resposta_chatbot = resposta_chatbot + "Sorry I did not understand!"
+        resposta_chatbot = resposta_chatbot + "Sorry repeat please!!"
         return resposta_chatbot
     else:
 
         print(texto_usuario)
-        if(texto_usuario == "chat ai"):
-            print("yes")
+        if(texto_usuario == "chat sobrar"):
+            print("Sim")
             resposta_chatbot = ''
             return resposta_chatbot
         else:
