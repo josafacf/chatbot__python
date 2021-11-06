@@ -36,7 +36,7 @@ conteudo = conteudo.lower()
 lista_sentencas = nltk.sent_tokenize(conteudo)
 
 pln = spacy.load("en_core_web_sm")
-stop_words = spacy.lang.pt.stop_words.STOP_WORDS
+stop_words = spacy.lang.en.stop_words.STOP_WORDS
 
 
 def preprocessamento(texto):
