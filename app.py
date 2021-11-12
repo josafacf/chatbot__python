@@ -5,8 +5,6 @@ import numpy as np
 from flask import Flask, request, jsonify
 from flask_socketio import SocketIO, send
 from http.client import responses
-nltk.download("wordnet", "nltk_data/")
-
 
 import bs4 as bs
 import urllib.request
