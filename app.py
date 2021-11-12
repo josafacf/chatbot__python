@@ -10,7 +10,6 @@ import bs4 as bs
 import urllib.request
 import re
 import nltk
-nltk.data.path.append('nltk_data')
 
 import numpy as np
 import random
