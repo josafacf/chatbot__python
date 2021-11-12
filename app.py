@@ -36,6 +36,7 @@ conteudo = conteudo.lower()
 lista_sentencas = nltk.sent_tokenize(conteudo)
 
 pln = spacy.load("en_core_web_sm")
+
 stop_words = spacy.lang.en.stop_words.STOP_WORDS
 
 
@@ -93,8 +94,8 @@ def responder(texto_usuario):
     else:
 
         print(texto_usuario)
-        if(texto_usuario == "chat ai"):
-            print("yes")
+        if(texto_usuario == "chat AI"):
+            print("Sim")
             resposta_chatbot = ''
             return resposta_chatbot
         else:
@@ -105,7 +106,7 @@ def responder(texto_usuario):
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'mysecret'
-socketio = SocketIO(app, cors_allowed_origins="*", port=5000)
+socketio = SocketIO(app, cors_allowed_origins="*")
 
 
 # Etapa 6: Função para retornar as respostas

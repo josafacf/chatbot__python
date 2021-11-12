@@ -15,7 +15,7 @@
     <script type="text/javascript" charset="utf-8">
         $(document).ready(function () {
 
-            var socket = io.connect('http://127.0.0.1:5000');
+            var socket = io.connect('https://chatbot-about-ai.herokuapp.com:5000');
 
             socket.on('message', function (msg) {
                 console.log('devolve ' + msg);
